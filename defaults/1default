@@ -1,0 +1,11 @@
+# Default server configuration
+
+server {
+	listen 80 default_server;
+	root /var/www/html/staticPage;
+	#index index.html index.htm index.nginx-debian.html;
+	location / {
+		try_files /index.html =404;
+	}
+	server_name _;
+}
